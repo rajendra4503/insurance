@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Planpiper</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="fonts/font.css">
+    <link rel="shortcut icon" href="images/planpipe_logo.png"/>  
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html"><img src="images/Plan-Pipe-newlogo.png"/><span>&nbsp;&nbsp;Plan Piper</span></a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="features.html">Features</a>
+                    </li>
+                    <li>
+                        <a href="benefits.html">Benefits</a>
+                    </li>
+                    <li>
+                        <a href="pricing.html">Pricing</a>
+                    </li>
+                    <li>
+                        <a href="whocanuse.html">Who can use this app?</a>
+                    </li>
+                    <li>
+                        <a href="login.php">Login</a>
+                    </li>
+                    <li class="active">
+                        <a href="register.html">Register</a>
+                    </li>
+                    <li>
+                        <a href="apps.html">Apps</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="register-header scrollthiscontent">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Register</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="container" style="width:100%">
+            <div class="row text-center">
+                <div class="col-sm-6 col-xs-12">
+                    <h2>Are you a provider?</h2><br>
+                    <div class="col-sm-2 col-sm-offset-2">
+                        <span class="fa-stack fa-4x">
+                            <img src="img/communities2.png">
+                        </span>
+                    </div>
+                    <div class="col-sm-8 title">
+                        <h3>Plan Providers</h3>
+                    </div>
+                    <div class="col-sm-12 descr">
+                        If you would like to use PlanPiper for your patients, you have to register as a provider (or vendor).</div><br>
+                    <div class="col-sm-12">
+                        <br><br>
+                        <a href="vendor_registration.php"><img src="images/register.png" class="bn"></a>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-xs-12">
+                    <h2>Are you a plan user?</h2><br>
+                    <div class="col-sm-2 col-sm-offset-2">
+                        <span class="fa-stack fa-4x">
+                            <img src="img/membericon.png">
+                        </span>
+                    </div>
+                    <div class="col-sm-8 title">
+                        <h3>Plan Users.</h3>
+                    </div>
+                    <div class="col-sm-12 descr">
+                        If you would like to use plans created by others, please register as a plan user</div><br>
+                    <div class="col-sm-12">
+                        <br><br>
+                        <a href="#"><img src="images/register.png" class="bn" style="opacity:0.1;cursor:not-allowed"></a>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div><br>
+    <div class="registerfooter">
+    	<footer>
+	        <div class="container">
+	            <div class="row">
+                    <div class="col-lg-8 col-md-8 col-sm-10 col-lg-offset-2 col-md-offset-2 col-sm-offset-1">
+                        <ul class="list-inline">
+                            <li>
+                                <a href="http://www.appmantras.com"><img src="images/appmantraslogo.png" width="20" height="20" />&nbsp;App Mantras</a>
+                            </li>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <li>
+                                <a href="useragreement.html">Terms of Usage</a>
+                            </li>&nbsp;&nbsp;&nbsp;&nbsp;
+                            
+                            <li>
+                                <a href="privacypolicy.html">Privacy Policy</a>
+                            </li>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <li data-reveal-id="contact">
+                                <a href="contactus.html">Contact Us</a>
+                            </li>
+                         </ul>
+                         <p class="copyright text-muted small">Copyright &copy; App Mantras Software Pvt. Ltd. All Rights Reserved.</p>
+                    </div>
+                </div>
+	        </div>
+	    </footer>
+    </div>
+    <script src="js/jquery-1.11.0.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+    $(document).ready(function(){
+        //alert(1);
+        var w = window.innerWidth;
+        var h = window.innerHeight;
+        var windowheight = h;
+        var available_height = h - 140;
+       // alert(available_height);
+        $('.scrollthiscontent').height(available_height);
+    });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+.print_content { 
+	width: 100%;
+	margin: 0; 
+	float: none; 
+}
+#printtable{
+	width: 100%;
+	font-family: OpenSans;
+	border : 1px solid #004f35;
+	background-color: #fff;
+	color: #000;
+}
+#printtdheading{
+	background-color: #004f35;
+	color: #fff;
+}

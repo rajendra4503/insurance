@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://www.planpiper.com/</loc>
+  <lastmod>2016-05-03T05:55:39+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.planpiper.com/about.html</loc>
+  <lastmod>2016-02-04T10:38:05+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.planpiper.com/features.html</loc>
+  <lastmod>2015-09-15T13:29:18+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.planpiper.com/benefits.html</loc>
+  <lastmod>2015-10-16T11:57:38+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.planpiper.com/pricing.html</loc>
+  <lastmod>2015-10-16T11:57:38+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.planpiper.com/whocanuse.html</loc>
+  <lastmod>2015-10-16T11:57:38+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.planpiper.com/login.php</loc>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.planpiper.com/register.html</loc>
+  <lastmod>2015-10-16T11:57:38+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.planpiper.com/apps.html</loc>
+  <lastmod>2015-10-16T11:57:38+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.planpiper.com/useragreement.html</loc>
+  <lastmod>2015-09-15T13:29:18+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.planpiper.com/privacypolicy.html</loc>
+  <lastmod>2015-09-15T13:29:18+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.planpiper.com/contactus.html</loc>
+  <lastmod>2015-09-15T13:29:18+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.planpiper.com/index.html</loc>
+  <lastmod>2016-05-03T05:55:39+00:00</lastmod>
+  <changefreq>always</changefreq>
+</url>
+<url>
+  <loc>http://www.planpiper.com/vendor_registration.php</loc>
+  <changefreq>always</changefreq>
+</url>
+</urlset>

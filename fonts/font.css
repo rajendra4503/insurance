@@ -1,0 +1,88 @@
+@font-face {
+	font-family: RalewayBold;
+	src: url(Raleway/Raleway-Bold.ttf);
+}
+@font-face {
+	font-family: RalewayExtraBold;
+	src: url(Raleway/Raleway-ExtraBold.ttf);
+}
+@font-face {
+	font-family: RalewayExtraLight;
+	src: url(Raleway/Raleway-ExtraLight.ttf);
+}
+@font-face {
+	font-family: RalewayHeavy;
+	src: url(Raleway/Raleway-Heavy.ttf);
+}
+@font-face {
+	font-family: RalewayLight;
+	src: url(Raleway/Raleway-Light.ttf);
+}
+@font-face {
+	font-family: RalewayMedium;
+	src: url(Raleway/Raleway-Medium.ttf);
+}
+@font-face {
+	font-family: RalewayRegular;
+	src: url(Raleway/Raleway-Regular.ttf);
+}
+@font-face {
+	font-family: RalewaySemiBold;
+	src: url(Raleway/Raleway-SemiBold.ttf);
+}
+@font-face {
+	font-family: RalewayThin;
+	src: url(Raleway/Raleway-Thin.ttf);
+}
+
+@font-face {
+	font-family: Freestyle;
+	src: url(Freestylescriptplain.woff);
+}
+
+.RalewayBold{
+	font-family: 'RalewayBold','Arial','sans-serif';
+
+}
+.RalewayExtraBold{
+	font-family: 'RalewayExtraBold','Arial','sans-serif';
+
+}
+
+.RalewayExtraLight{
+	font-family: 'RalewayExtraLight','Arial','sans-serif';
+
+}
+
+.RalewayHeavy{
+	font-family: 'RalewayHeavy','Arial','sans-serif';
+
+}
+
+.RalewayLight{
+	font-family: 'RalewayLight','Arial','sans-serif';
+
+}
+
+.RalewayMedium{
+	font-family: 'RalewayMedium','Arial','sans-serif';
+
+}
+
+.RalewayRegular{
+	font-family: 'RalewayRegular','Arial','sans-serif';
+
+}
+
+.RalewaySemiBold{
+	font-family: 'RalewaySemiBold','Arial','sans-serif';
+
+}
+
+.RalewayThin{
+	font-family: 'RalewayThin','Arial','sans-serif';
+
+}
+.Freestyle {
+	font-family: :'Freestyle','Arial','sans-serif';
+}

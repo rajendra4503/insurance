@@ -1,0 +1,322 @@
+body {
+    padding-top: 50px; 
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+    /*background: url(../images/mainbg2.png) no-repeat center; */
+}
+
+@media only screen and (min-width:768px) and (max-width:992px){
+	body{
+		padding-top:100px;
+	}
+}
+
+.navbar-inverse {
+  background-color: #0b3024;
+  border-color:#0b3024;
+  border:none;
+  /*box-shadow:0px 2px 5px #F1BD43;*/
+ }
+
+.navbar-inverse .navbar-brand {
+	font-family: Freestyle;
+ 	font-size: 25px;
+	color: #f2bd43;
+}
+
+.navbar-inverse .navbar-brand span{
+	color: #f2bd43;
+	font-size: 40px;
+	font-family: Freestyle;
+}
+
+
+.navbar-brand img{
+	width:1em; 
+	height:auto; 
+	margin-top:-3%;
+}
+
+.navbar-inverse .navbar-nav > li > a{
+  color: #f2bd43;
+}
+
+@media only screen and (min-width:992px) {
+	.navbar-nav{
+		float:right;
+	}
+}
+
+
+/*.navbar-inverse .navbar-nav > li > a > img{
+  width:5em;
+  height:auto;
+}
+
+@media only screen and (min-width:768px){
+	.navbar-inverse .navbar-nav > li > a > img{
+	  margin-top:-12%;
+	}
+}
+
+@media only screen and (min-width:768px) and (max-width:992px){
+	.navbar-inverse .navbar-nav li:last-child{
+	  display:none;
+	}
+	.navbar-inverse .navbar-nav li:nth-last-child(2){
+	  display:none;
+	}
+}*/
+
+.navbar-inverse .navbar-nav > li > a:hover{
+  background-color: #f2bd43;
+  color: #000;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus  {
+  background-color: #f2bd43;
+  color: #000;
+}
+
+.land-header {
+	background-color:#004F35;
+	color:#FFFFFF;
+}
+
+.banner{
+    padding: 3% 2%;
+    color: #f8f8f8;
+    background-color:#004F35;
+	text-align:center;
+}
+
+.banner h1{
+    margin: 0;
+    font-size: 3em;
+}
+
+.banner p{
+    margin: 0;
+    font-size: 1.6em;
+}
+
+footer {
+	background-color:#0b3024;
+	padding-top:2%;
+	text-align:center;
+}
+
+footer li > a{
+	color:#FFFFFF;
+}
+
+footer li > a:hover{
+	color:#f2bd43;
+	text-decoration:none;
+
+}
+
+
+/* about section started here */
+
+.about-header {
+    text-align: center;
+}
+
+.about-header li
+
+{
+
+text-align: left;
+font-size: 1.4em;
+margin-left: -4%;
+}
+
+.about-header .col-sm-12 p{
+	font-size:1.3em;
+	font-style:italic;
+}
+
+.about-header .col-sm-8 p{
+	font-size:1.4em;
+	text-align:left;
+}
+
+@media (min-width: 768px) {
+	.aboutfooter{
+		width:100%;
+	}
+}
+
+/* about section ended here */
+
+/* features scetion started here */
+
+.feature-header{
+    text-align: center;
+}
+
+.feature-header li
+{
+
+text-align: left;
+font-size: 1.4em;
+margin-left: -4%;
+
+}
+
+.feature-header h3{
+	text-align:center;
+}
+
+.feature-header .container .row .col-md-5{
+	padding-left:40px
+}
+
+/* fetatures section ended here */
+
+/* benefits section started here */
+
+.benefits-header{
+    text-align: center;
+}
+
+.benefits-header h2{
+    text-align: left;
+}
+
+
+.benefits-header .fa-4x img{
+	width:60%;
+	height:auto;
+}
+.benefits-header li{
+	text-align:left;
+	font-size:1.4em;
+	margin-left:-4%
+}
+
+	.benefitsfooter{
+		width:100%;
+		position:absolute;
+		bottom:0px;
+	}
+
+.img-responsive
+{
+  display: block;
+  width: 100% \9;
+  max-width: 70%;
+  height: auto;
+}
+
+
+/* benefits section ended here */
+
+/* pricing section started here */
+
+.pricing-header{
+    text-align: center;
+}
+
+	.pricingfooter{
+		width:100%;
+		position:absolute;
+		bottom:0px;
+	}
+.bn {
+	width:30%;
+	height:auto;
+}
+
+/* pricing section ended here */
+
+/*who can use this app? section started here*/
+
+.whocan-header{
+    text-align: center;
+}
+
+.whocan-header li{
+	text-align:left;
+	font-size:1.3em;
+}
+/*
+.whocan-header ol {
+	margin-left:0; 
+	padding-left:0; 
+	counter-reset:item  
+}
+.whocan-header ol li {
+	margin-left:0; 
+	padding-left:0; 
+	counter-increment:item;  
+	list-style:none inside;
+	margin-bottom:10px;
+}
+.whocan-header ol li:before {
+	content:"" counter(item) ""; 
+	padding:2px 7px;
+	margin-right:0.5em;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	border-radius: 100px; 
+}
+*/
+	.whocanfooter{
+		width:100%;
+		position:absolute;
+		bottom:0px;
+	}
+.row {
+  margin-right: 0px;
+  margin-left: 0px;
+}
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  -webkit-transition: all .2s ease-in-out;
+       -o-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+
+/*who can use this app? section ended here*/
+
+/* register section stared here */
+
+.register-header{
+    text-align: center;
+}
+
+.register-header .fa-4x img{
+	width:60%;
+	height:auto;
+}
+
+.register-header .title{
+	text-align:left;
+}
+
+.register-header .descr{
+	text-align:center;
+	font-size:1em;
+	font-weight: 500;
+}
+
+	.registerfooter{
+		width:100%;
+		position:absolute;
+		bottom:0px;
+	}
+
+.scrollthiscontent{
+	overflow: auto;
+}
+/* register section ended here */

@@ -1,0 +1,172 @@
+USERID: 123 OSTYPE: android DEVICEINFO:  CUSTOMIZED_ERROR_MESSAGE: GCM->Received Message error  SYSTEM_GENERATED_ERROR: From GCM: error (null). PHONE_TIME: 2015-07-30 11:39:55 SYSTEM_TIME: 2015-07-31 10:28:36 
+USERID: 123 OSTYPE: android DEVICEINFO: Nexus 5 , version : 4.4.2 CUSTOMIZED_ERROR_MESSAGE: GCM->Received Message error  SYSTEM_GENERATED_ERROR: From GCM: error (AUTHENTICATION_FAILED). PHONE_TIME: 2015-07-30 11:39:59 SYSTEM_TIME: 2015-07-31 10:28:44 
+USERID: 123 OSTYPE: android DEVICEINFO: Nexus 6 , version : 5.0.2 CUSTOMIZED_ERROR_MESSAGE: GCM->Registration SYSTEM_GENERATED_ERROR: sudhir : sudhir@appmantras.com : APA91bGeX6-uAJ52vTtVf9n0Dvp02h1-l2DDYPwil9uOY-kJ-Mm87JEl4BGTxdVGubnw4xhWSAP_Q3ToXaFu5X_4zTxSxHZjIyS1jhSBN2p-n7H30Aw1xOkNMAi0YATKghfiK0ZWQnUU PHONE_TIME: 2015-07-30 11:40:08 SYSTEM_TIME: 2015-07-31 10:28:48 
+USERID: 123 OSTYPE: android DEVICEINFO:  CUSTOMIZED_ERROR_MESSAGE: GCM->Received Message is null / empty SYSTEM_GENERATED_ERROR: null PHONE_TIME: 2015-07-30 11:40:14 SYSTEM_TIME: 2015-07-31 10:28:55 
+USERID: 123 OSTYPE: android DEVICEINFO: Nexus 5 , version : 4.4.2 CUSTOMIZED_ERROR_MESSAGE: GCM->Received Message error  SYSTEM_GENERATED_ERROR: From GCM: error (null). PHONE_TIME: 2015-07-30 11:41:53 SYSTEM_TIME: 2015-07-31 10:30:34 
+USERID: 123 OSTYPE: android DEVICEINFO: Nexus 6 , version : 5.0.2 CUSTOMIZED_ERROR_MESSAGE: GCM->Received Message error  SYSTEM_GENERATED_ERROR: From GCM: error (null). PHONE_TIME: 2015-07-30 11:41:46 SYSTEM_TIME: 2015-07-31 10:30:35 
+USERID: 123 OSTYPE: android DEVICEINFO: Nexus 6 , version : 5.0.2 CUSTOMIZED_ERROR_MESSAGE: GCM->Received Message is null / empty SYSTEM_GENERATED_ERROR: null PHONE_TIME: 2015-07-30 11:42:22 SYSTEM_TIME: 2015-07-31 10:31:02 
+USERID: 123 OSTYPE: android DEVICEINFO: Nexus 5 , version : 4.4.2 CUSTOMIZED_ERROR_MESSAGE: GCM->Received Message is null / empty SYSTEM_GENERATED_ERROR: null PHONE_TIME: 2015-07-30 11:42:30 SYSTEM_TIME: 2015-07-31 10:31:15 
+USERID: 123 OSTYPE: android DEVICEINFO: Nexus 6 , version : 5.0.2 CUSTOMIZED_ERROR_MESSAGE: Login->WebService Call SYSTEM_GENERATED_ERROR: Could not convert string to json, more info : org.json.JSONException: End of input at character 25 of 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ PHONE_TIME: 2015-07-30 11:52:34 SYSTEM_TIME: 2015-07-31 10:41:36 
+USERID: 123 OSTYPE: android DEVICEINFO: Nexus 6 , version : 5.0.2 CUSTOMIZED_ERROR_MESSAGE: Login->WebService Call SYSTEM_GENERATED_ERROR: Could not convert string to json, more info : org.json.JSONException: End of input at character 25 of 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ PHONE_TIME: 2015-07-30 11:55:07 SYSTEM_TIME: 2015-07-31 10:43:49 
+USERID: 123 OSTYPE: android DEVICEINFO: Nexus 6 , version : 5.0.2 CUSTOMIZED_ERROR_MESSAGE: Login->WebService Call SYSTEM_GENERATED_ERROR: Input has special charector, more info : org.json.JSONException: End of input at character 25 of 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ PHONE_TIME: 2015-07-30 11:55:42 SYSTEM_TIME: 2015-07-31 10:44:28 
+USERID: 123 OSTYPE: android DEVICEINFO: Nexus 6 , version : 5.0.2 CUSTOMIZED_ERROR_MESSAGE: Login->WebService Call SYSTEM_GENERATED_ERROR: Could not convert string to json, more info : org.json.JSONException: End of input at character 25 of 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ PHONE_TIME: 2015-07-31 12:05:33 SYSTEM_TIME: 2015-07-31 10:54:21 
+USERID: 123 OSTYPE: android DEVICEINFO: Nexus 6 , version : 5.0.2 CUSTOMIZED_ERROR_MESSAGE: Login->WebService Call SYSTEM_GENERATED_ERROR: Could not convert string to json, more info : org.json.JSONException: End of input at character 25 of 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ PHONE_TIME: 2015-07-31 12:08:25 SYSTEM_TIME: 2015-07-31 10:57:06 
+USERID: 123 OSTYPE: android DEVICEINFO: Nexus 6 , version : 5.0.2 CUSTOMIZED_ERROR_MESSAGE: Login->WebService Call SYSTEM_GENERATED_ERROR: Could not convert string to json, more info : org.json.JSONException: End of input at character 25 of 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ PHONE_TIME: 2015-07-31 12:10:35 SYSTEM_TIME: 2015-07-31 10:59:18 
+USERID: 123 OSTYPE: android DEVICEINFO: Micromax A110Q , version : 4.2.1 CUSTOMIZED_ERROR_MESSAGE: GCM->Registration SYSTEM_GENERATED_ERROR: sudhir : sudhir@appmantras.com : APA91bFHxefDaFNuDzjWCtDXtamdvHaetiWnVoLlPna5J75RLEZWKeMBb0hw4psun3N1LC5yCOL47LAU2T5SdtHY5EYEaDVn8nZsY21BpH3RKjf2EpCiBrUKLQXjzolaI46cu0NIEgGO PHONE_TIME: 2015-08-02 12:31:00 SYSTEM_TIME: 2015-07-31 17:39:54 
+USERID: 123 OSTYPE: android DEVICEINFO: Micromax A110Q , version : 4.2.1 CUSTOMIZED_ERROR_MESSAGE: GCM->Received Message is null / empty SYSTEM_GENERATED_ERROR: null PHONE_TIME: 2015-08-02 12:31:00 SYSTEM_TIME: 2015-07-31 17:39:54 
+USERID: 123 OSTYPE: android DEVICEINFO: Micromax A110Q , version : 4.2.1 CUSTOMIZED_ERROR_MESSAGE: GCM->Registration SYSTEM_GENERATED_ERROR: sudhir : sudhir@appmantras.com : APA91bEF2I92aSqooU2pr597fCOSnLoDhuNhx55MEgIVwEAdTfXHFjXBcTLarDnUecOtKS2dVx_kR3YPbl3EH2ujDnYbERSkdw2btxDfE1LQfhM_pz3EAoqUVW35goxJwV-zxN_ZXQ5c PHONE_TIME: 2015-08-02 12:43:21 SYSTEM_TIME: 2015-07-31 17:52:15 
+USERID: 123 OSTYPE: android DEVICEINFO: Micromax A110Q , version : 4.2.1 CUSTOMIZED_ERROR_MESSAGE: GCM->Received Message is null / empty SYSTEM_GENERATED_ERROR: null PHONE_TIME: 2015-08-02 12:43:21 SYSTEM_TIME: 2015-07-31 17:52:15 
+USERID: 123 OSTYPE: android DEVICEINFO: Micromax A110Q , version : 4.2.1 CUSTOMIZED_ERROR_MESSAGE: Sync PlanManager->Error inserting PlanDeails Into PlanAct Table SYSTEM_GENERATED_ERROR: Could not convert string to json, more info : java.lang.ArrayIndexOutOfBoundsException: length=1; index=1 PHONE_TIME: 2015-08-02 12:43:45 SYSTEM_TIME: 2015-07-31 17:52:38 
+USERID: 123 OSTYPE: android DEVICEINFO: Micromax A110Q , version : 4.2.1 CUSTOMIZED_ERROR_MESSAGE: GCM->Registration SYSTEM_GENERATED_ERROR: sudhir : sudhir@appmantras.com : APA91bHf4hpDRKB7GthA2YH31i2Koi2qxOPpCDHeZt7727BwYubYVi4aSeZusZVk-GEMR1lq0_gXLpXGeplxMnoh-KVijlmqKCc6vn_aiVqfKWNB_MH8BPp0NMLrJQ3cVRmoJkF0kH1H PHONE_TIME: 2015-08-02 12:49:06 SYSTEM_TIME: 2015-07-31 17:58:00 
+USERID: 123 OSTYPE: android DEVICEINFO: Micromax A110Q , version : 4.2.1 CUSTOMIZED_ERROR_MESSAGE: GCM->Received Message is null / empty SYSTEM_GENERATED_ERROR: null PHONE_TIME: 2015-08-02 12:49:06 SYSTEM_TIME: 2015-07-31 17:58:00 
+USERID: 123 OSTYPE: android DEVICEINFO: Micromax A110Q , version : 4.2.1 CUSTOMIZED_ERROR_MESSAGE: Sync PlanManager->Error inserting PlanDeails Into PlanAct Table SYSTEM_GENERATED_ERROR: Could not convert string to json, more info : java.lang.ArrayIndexOutOfBoundsException: length=1; index=1 PHONE_TIME: 2015-08-02 12:51:49 SYSTEM_TIME: 2015-07-31 18:00:43 
