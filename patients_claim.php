@@ -1,13 +1,11 @@
 <?php
 session_start();
-//ini_set("display_errors","0");
+ini_set("display_errors","0");
 //echo "<pre>"; print_r($_SESSION);exit;
 include('include/configinc.php');
 include('include/session.php');
 include('include/functions.php');
-
   mysql_set_charset('utf8');
-
   if( !empty( $_REQUEST['lang']) && $_REQUEST['lang'] != '' ){
     $table = $_REQUEST['lang'];
     if(table_exists($table)){
@@ -175,7 +173,7 @@ include('include/functions.php');
                 $query .= " WHERE H.Declaration_Date BETWEEN  '".$from."' AND '".$to ."'";
             }
 
-            $query .= " ORDER BY P.Claim_ID ASC";
+            $query .= " ORDER BY P.Claim_ID DESC";
 
             $results = mysql_query($query);
 

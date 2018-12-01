@@ -307,8 +307,9 @@ include('include/functions.php');
 	    <div id="pageheading" style="text-align: left;"> 
 	    		DETAILS OF AILMENT DIAGNOSED (PRIMARY)
 	    </div>
-		<label class="col-sm-6 col-form-label"> Diagnosis</label>
-		<label class="col-sm-6 col-form-label"> Procedure</label>
+			<label class="col-sm-6 col-form-label"> Diagnosis</label>
+
+			<label class="col-sm-6 col-form-label"> Procedure</label>
 	    <?php 
 
 			if (isset($_GET['claimID'] ) && !empty($_GET['claimID'])) {
@@ -326,7 +327,7 @@ include('include/functions.php');
 				$icdpcs_l =   array_unique($icdpcs);
 				$PClaimID = $_GET['claimID'];
 
-				$pcquery = "SELECT * FROM claim_diagnosis_procedure WHERE Claim_ID = '$PClaimID'";
+				$pcquery = "SELECT DISTINCT C.Claim_ID,C.ICD10CM,C.ICD10PCS,D.ICD10_CM_CODE_DESCRIPTION,P.ICD10_PCS_CODE_DESCRIPTION FROM claim_diagnosis_procedure AS C JOIN diagnosis_code AS D ON C.ICD10CM = D.ICD10_CM_CODE JOIN diagnosis_procedure_code AS P ON C.ICD10PCS = P.ICD10_PCS_CODE WHERE C.Claim_ID = '$PClaimID'";
 				$resultq1 = mysql_query($pcquery);
 
 			}
@@ -338,7 +339,7 @@ include('include/functions.php');
 			<div class="col-sm-5">
 				<input value="<?php echo $row["ICD10CM"]; ?>" type="text" class="form-control">
 				<p>
-					when an unknown printer took a galley of type and scrambled.
+				<?php echo $row["ICD10_CM_CODE_DESCRIPTION"]; ?>
 				</p>
 			</div>
 			<div class="col-sm-1">	
@@ -356,7 +357,7 @@ include('include/functions.php');
 
 					 <input value="<?php echo $row["ICD10PCS"]; ?>" type="text" class="form-control">
 					 <p>
-						when an unknown printer took a galley of type and scrambled it to make a type specimen book
+					 <?php echo $row["ICD10_PCS_CODE_DESCRIPTION"]; ?>
 					 </p>
 			    </div>
 			    <div class="col-sm-1">	 
@@ -779,24 +780,6 @@ include('include/functions.php');
                     alert('it broke');
                 }
             });
-
-
-          // if(!this.checked){
-          //   	var check   = $('#verification').val();
-          //   	var claimId = $('#claimID').val();
-          //   $.ajax({
-          //       type: "POST",
-          //       url: "verification_patient.php",
-          //       data: {"type" :'unchecked',"claimId":claimId},
-          //       success: function(data) {
-          //           alert(data);
-          //           $('#verified_msg').html('Not Verified');
-          //       },
-          //        error: function() {
-          //           alert('it broke');
-          //       }
-          //   });
-          // }
 
       });
 

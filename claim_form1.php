@@ -142,9 +142,8 @@ if (!empty($_POST['Hospital_Name']) !='' && !empty($_POST['Patient_Name']) !='' 
 			.list li{padding: 10px; background: #f0f0f0; border-bottom: #bbb9b9 1px solid;}
 			.list li:hover{background:#ece3d2;cursor: pointer;}
 			.error{color: red;font-size: 15px;font-weight: bold;}
-			.dia_des{font-size: 15px;font-weight: bold;}
+			.dia_des{font-size: 15px;font-weight: normal;}
 			.radio label, .checkbox label {font-weight: bold;}
-
 			.area_code_errmsg{color: red;}
 			.phone_no_errmsg{color: red;}
 			.areacode_errmsg{color: red;}
@@ -377,49 +376,48 @@ if (!empty($_POST['Hospital_Name']) !='' && !empty($_POST['Patient_Name']) !='' 
     	<div id="pageheading" style="text-align: left;"> DETAILS OF AILMENT DIAGNOSED (PRIMARY)</div>
 		<div class="col-sm-6">
 			<label>Primary Diagnosis ( ICD 10 Codes ) </label>
-			<input type="text" id="1" name="diagnosis[]" class="form-control diagnosis">
-			<p class="dia_des"></p>
+			<input type="text" id="ICD1" name="diagnosis[]" class="form-control diagnosis">
+			<p id="des_1" class="dia_des"></p>
 		</div>
     	<div class="col-sm-6">
 		    <label>Procedure ( ICD 10 PCS )</label>
-			<input type="text" id="1" name="procedure[]" class="form-control diagnosis">
-			<p class="dia_des"></p>
+			<input type="text" id="PCS1" name="procedure[]" class="form-control procedure">
+			<p id="desp_1" class="dia_des"></p>
         </div>
         <div style="clear:both;"><br></div>
         <div class="col-sm-6">
 			<label>Additional Diagnosis ( ICD 10 Codes ) </label>
-			 <input type="text" id="2" name="diagnosis[]" class="form-control diagnosis">
-			 <p class="dia_des"></p>
+			 <input type="text" id="ICD2" name="diagnosis[]" class="form-control diagnosis">
+			 <p id="des_2" class="dia_des"></p>
 		</div>
     	<div class="col-sm-6">
 		    <label>Procedure ( ICD 10 PCS )</label>
-			<input type="text" id="2" name="procedure[]" class="form-control diagnosis">
-			<p class="dia_des"></p>
+			<input type="text" id="PCS2" name="procedure[]" class="form-control procedure">
+			<p id="desp_2" class="dia_des"></p>
         </div>
         <div style="clear:both;"><br></div>
         <div class="col-sm-6">
 			<label>Co-Morbidities ( ICD 10 Codes ) </label>
-			 <input type="text" id="3" name="diagnosis[]" class="form-control diagnosis">
-			 <p class="dia_des"></p>
+			 <input type="text" id="ICD3" name="diagnosis[]" class="form-control diagnosis">
+			 <p id="des_3" class="dia_des"></p>
 		</div>
     	<div class="col-sm-6">
 		    <label>Procedure ( ICD 10 PCS )</label>
-			<input type="text" id="3" name="procedure[]" class="form-control diagnosis">
-			<p class="dia_des"></p>
+			<input type="text" id="PCS3" name="procedure[]" class="form-control procedure">
+			<p id="desp_3" class="dia_des"></p>
         </div>
         <div style="clear:both;"><br></div>
         <div class="col-sm-6">
 			<label>Co-Morbidities ( ICD 10 Codes ) </label>
-			 <input type="text" id="4" name="diagnosis[]" class="form-control diagnosis">
-			 <p class="dia_des"></p>
+			 <input type="text" id="ICD4" name="diagnosis[]" class="form-control diagnosis">
+			 <p id="des_4" class="dia_des"></p>
 		</div>
     	<div class="col-sm-6">
 		    <label>Details of Procedure</label>
-			<input type="text" id="4" name="procedure[]" class="form-control diagnosis">
-			<p class="dia_des"></p>
+			<input type="text" id="PCS4" name="procedure[]" class="form-control procedure">
+			<p id="desp_4" class="dia_des"></p>
         </div>
         <div style="clear:both;"><br></div>
-        <div style="clear: both;"></div>
 		<div class="col-sm-3">
 		<label>Pre Authorization Obtained</label>
 			<div class="form-check">
@@ -716,13 +714,14 @@ if (!empty($_POST['Hospital_Name']) !='' && !empty($_POST['Patient_Name']) !='' 
 	 </section>
  </div>
 </div>	
-</div>	
+</div>
 </div><!-- big_wrapper ends -->   
 <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/bootstrap-timepicker.min.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script src="js/bootstrap3-typeahead.min.js"></script> 
 <script>
 $(document).ready(function () {
   $("#area_code").keypress(function (e) {
@@ -750,63 +749,154 @@ $(document).ready(function () {
     }
    });
 });
-/**************************primary diagnosis**********************************/
-	$(document).ready(function(){
-		$(".diagnosis1").keyup(function(){
-			var ID = $(this).attr("id");
-            $('#ICD10Codes_description_'+ID).html('');
-            $('#ICD10PCS_procedure_'+ID).html('');
-            $('#ICD10PCS_description_'+ID).html('');
-			$.ajax({
-			type: "POST",
-			url: "search.php",
-			data:'type=primary&selectId='+ID+'&keyword='+$(this).val(),
-			beforeSend: function(){
-				$("#"+ID).css("background","#FFF url(images/LoaderIcon.gif) no-repeat 165px");
-			},
-			success: function(data){
-				$("#search_ICD10Codes_"+ID).show();
-				$("#search_ICD10Codes_"+ID).html(data);
-				$("#"+ID).css("background","#FFF");
-			}
-			});
-		});
-	});
-	function selectValue(val,id) {
-		$("#"+id).val(val);
-		$("#search_ICD10Codes_"+id).hide();
-		$.ajax({
-			type: "POST",
-			url: "search.php",
-			data:'type=primary&selectId='+id+'&description='+val,
-			success: function(data){
-				$("#ICD10Codes_description_"+id).html(data);
-			 }
-		});
-		$.ajax({
-			type: "POST",
-			url: "search.php",
-			data:'type=primary&selectId='+id+'&procedure='+val,
-			success: function(data){
-				$("#ICD10PCS_procedure_"+id).html(data);
-			 }
-		});
-	}
-	$('.change_value1').on('change', function() {
-	     var id = $(this).attr("id");
-	     var val = id.split("_");
-         var number = val[2];
-	  	 $.ajax({
-			type: "POST",
-			url: "search.php",
-			data:'type=primary&selectId='+number+'&procedure_description='+this.value,
-			success: function(data){
-				$("#ICD10PCS_description_"+number).html(data);
-			 }
-		});
-	});
-</script>
-<script type="text/javascript">
+
+/**************************diagnosis********************/
+	$('#ICD1').typeahead({
+		displayText: function(item) {
+		return item.label
+		},
+		afterSelect: function(item) {
+		this.$element[0].value = item.value;
+		},
+		source: function (query, process) {
+		return $.getJSON('ajax_diagnosis_code.php', { query: query }, function(data) {
+		process(data)
+		})
+		},
+		updater: function (item) {
+		$('#des_1').html(item.desc);
+        return item;
+      }
+    });
+
+	$('#ICD2').typeahead({
+		displayText: function(item) {
+		return item.label
+		},
+		afterSelect: function(item) {
+		this.$element[0].value = item.value;
+		},
+		source: function (query, process) {
+		return $.getJSON('ajax_diagnosis_code.php', { query: query }, function(data) {
+		process(data)
+		})
+		},
+		updater: function (item) {
+		$('#des_2').html(item.desc);
+        return item;
+      }
+    });
+
+	$('#ICD3').typeahead({
+		displayText: function(item) {
+		return item.label
+		},
+		afterSelect: function(item) {
+		this.$element[0].value = item.value;
+		},
+		source: function (query, process) {
+		return $.getJSON('ajax_diagnosis_code.php', { query: query }, function(data) {
+		process(data)
+		})
+		},
+		updater: function (item) {
+		$('#des_3').html(item.desc);
+        return item;
+      }
+    });
+
+	$('#ICD4').typeahead({
+		displayText: function(item) {
+		return item.label
+		},
+		afterSelect: function(item) {
+		this.$element[0].value = item.value;
+		},
+		source: function (query, process) {
+		return $.getJSON('ajax_diagnosis_code.php', { query: query }, function(data) {
+		process(data)
+		})
+		},
+		updater: function (item) {
+		$('#des_4').html(item.desc);
+        return item;
+      }
+    });
+
+
+	/**************************diagnosis********************/
+	$('#PCS1').typeahead({
+		displayText: function(item) {
+		return item.label
+		},
+		afterSelect: function(item) {
+		this.$element[0].value = item.value
+		},
+		source: function (query, process) {
+		return $.getJSON('ajax_procedure_code.php', { query: query }, function(data) {
+		process(data)
+		})
+		},
+		updater: function (item) {
+		$('#desp_1').html(item.desc);
+        return item;
+      }
+    });
+
+	$('#PCS2').typeahead({
+		displayText: function(item) {
+		return item.label
+		},
+		afterSelect: function(item) {
+		this.$element[0].value = item.value
+		},
+		source: function (query, process) {
+		return $.getJSON('ajax_procedure_code.php', { query: query }, function(data) {
+		process(data)
+		})
+		},
+		updater: function (item) {
+		$('#desp_2').html(item.desc);
+        return item;
+      }
+    });
+
+	$('#PCS3').typeahead({
+		displayText: function(item) {
+		return item.label
+		},
+		afterSelect: function(item) {
+		this.$element[0].value = item.value
+		},
+		source: function (query, process) {
+		return $.getJSON('ajax_procedure_code.php', { query: query }, function(data) {
+		process(data)
+		})
+		},
+		updater: function (item) {
+		$('#desp_3').html(item.desc);
+        return item;
+      }
+    });
+
+	$('#PCS4').typeahead({
+		displayText: function(item) {
+		return item.label
+		},
+		afterSelect: function(item) {
+		this.$element[0].value = item.value
+		},
+		source: function (query, process) {
+		return $.getJSON('ajax_procedure_code.php', { query: query }, function(data) {
+		process(data)
+		})
+		},
+		updater: function (item) {
+		$('#desp_4').html(item.desc);
+        return item;
+      }
+    });
+
 	$( "#assigntouser" ).click(function() {
 	   $( "#frm_assign_incurance" ).validate( {
 				rules: {
@@ -850,6 +940,9 @@ $(document).ready(function () {
 				}
 			} );
 		$( "#frm_assign_incurance" ).submit();
+
+		document.getElementById("frm_assign_incurance").reset();
+
 	});
 
  	$('.nav-tabs a').click(function(){
@@ -913,7 +1006,7 @@ $(document).ready(function () {
 	     });
 	 });
 	$(document).ready(function() {
-         var w = window.innerWidth;
+        var w = window.innerWidth;
         var h = window.innerHeight;
         var total = h - 150;
         var each = total/12;
@@ -940,7 +1033,6 @@ $(document).ready(function () {
               //$('#content_wrapper').removeClass("col-sm-12");
               sidebarflag = 1;
           }
-          
         });
         var merchant = '<?php echo $logged_merchantid;?>';
         <?php include('js/notification.js');?>
