@@ -136,7 +136,7 @@ include('include/functions.php');
 
       <?php
 
-            $query = "SELECT P.Patient_Name,P.Policy_No,P.Date_of_Admission,H.Hospital_Name,P.Claim_ID,H.Declaration_Date FROM patient_details AS P JOIN hospital_details AS H ON P.Claim_ID = H.Claim_ID";
+            $query = "SELECT P.Patient_Name,P.Patient_Last_Name,P.Policy_No,P.Date_of_Admission,H.Hospital_Name,P.Claim_ID,H.Declaration_Date FROM patient_details AS P JOIN hospital_details AS H ON P.Claim_ID = H.Claim_ID";
 
             if(isset($_POST['ClaimID']) !=''){
 
@@ -146,7 +146,7 @@ include('include/functions.php');
 
                $PatientName = $_POST['PatientName'];
 
-               $query .= " WHERE P.Patient_Name LIKE '%".$PatientName."%'";
+               $query .= " WHERE P.Patient_Name LIKE '%".$PatientName."%' OR P.Patient_Last_Name LIKE '%".$PatientName."%'";
 
             }elseif (isset($_POST['PatientInsId']) !=''){
 
@@ -208,11 +208,11 @@ include('include/functions.php');
                 <?php 
                   $i = 1;
                   while($result = mysql_fetch_assoc($results)){ ?>
-               <tr class="tablecontents" id="<?php echo $result['Claim_ID']?>">
+                <tr class="tablecontents" id="<?php echo $result['Claim_ID']?>">
 
                 <td><?php echo $i;?></td>
 
-                <td><?php echo $result['Patient_Name']?></td>
+                <td><?php echo $result['Patient_Name'].' '.$result['Patient_Last_Name'];?></td>
 
                 <td><?php echo $result['Claim_ID']?></td>
 

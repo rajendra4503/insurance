@@ -24,7 +24,10 @@ if (!empty($_POST['Hospital_Name']) !='' && !empty($_POST['Patient_Name']) !='' 
 	$date = date("Y-m-d", strtotime($_POST['date']));
 	$place = escape_string($_POST['place']);
 	//Patient Details
-	$Patient_Name = escape_string($_POST['Patient_Name']);
+	$Patient_Name      =    escape_string($_POST['Patient_Name']);
+
+	$Patient_Last_Name =    escape_string($_POST['Patient_Last_Name']);
+
 	$IP_Registration = escape_string($_POST['IP_Registration']);
 	$gender = escape_string($_POST['gender']);
 	$DateofBirth = date("Y-m-d", strtotime($_POST['DateofBirth']));
@@ -46,8 +49,8 @@ if (!empty($_POST['Hospital_Name']) !='' && !empty($_POST['Patient_Name']) !='' 
          $Claim_ID =  date("Y").'00000001';
      }
 	$Patient_ID = 'PID-'.substr(str_shuffle("0123456789"), 0,5);
-	$patient_query = "INSERT INTO patient_details (Patient_ID,Claim_ID,Patient_Name,Policy_No,Gender,Date_of_Birth,Date_of_Admission, Time_of_Admission,Date_of_Discharge,Time_of_Discharge,Type_of_Admission,Date_of_Delivery,Gravida_Status,Status_Time_of_Discharge,Total_Claimed_Amount,CreatedDate,CreatedBy) VALUES (
-	'$Patient_ID', '$Claim_ID', '$Patient_Name', '$IP_Registration', '$gender', '$DateofBirth', '$DateofAdmission', '$DateofTime', '$DateofDischarge', '$TimeofDischarge', '$type_admission', '$DateofDelivery', '$GravidaStatus', '$status_time','$ClaimedAmount',now(),'')";
+	$patient_query = "INSERT INTO patient_details (Patient_ID,Claim_ID,Patient_Name,Patient_Last_Name,Policy_No,Gender,Date_of_Birth,Date_of_Admission, Time_of_Admission,Date_of_Discharge,Time_of_Discharge,Type_of_Admission,Date_of_Delivery,Gravida_Status,Status_Time_of_Discharge,Total_Claimed_Amount,CreatedDate,CreatedBy) VALUES (
+	'$Patient_ID', '$Claim_ID', '$Patient_Name','$Patient_Last_Name','$IP_Registration', '$gender', '$DateofBirth', '$DateofAdmission', '$DateofTime', '$DateofDischarge', '$TimeofDischarge', '$type_admission', '$DateofDelivery', '$GravidaStatus', '$status_time','$ClaimedAmount',now(),'')";
 		if (mysql_query($patient_query))
 		{
 				$hospital_query = "INSERT INTO `hospital_details` (`Claim_ID`, `Hospital_Name`, `Hospital_ID`,`Doctor_Name`,`Qualification`,`Network_Type`,`Registration_No`, `Country_Code`, `Area_Code`, `Phone_No`,`Declaration_Date`,`Declaration_Place`,`CreatedDate`, `CreatedBy`) VALUES ('$Claim_ID', '$Hospital_Name', '$Hospital_ID','$Doctor_Name','$Qualification','$hospital_type','$Registration_No', '$cont_code', '$area_code', '$phone_no','$date','$place',now(),'')";
@@ -136,7 +139,9 @@ if (!empty($_POST['Hospital_Name']) !='' && !empty($_POST['Patient_Name']) !='' 
 		<link rel="stylesheet" type="text/css" href="fonts/font.css">
 		<link rel="shortcut icon" href="images/planpipe_logo.png"/>
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-		<link type="text/css" href="css/bootstrap-timepicker.min.css" />
+        <link href="https://cdn.jsdelivr.net/bootstrap.timepicker/0.2.6/css/bootstrap-timepicker.min.css" rel="stylesheet" />
+
+
 			<style>
 			.list{float:left;list-style:none;margin-top:-3px;padding:0;width:190px;position: absolute; z-index: 99;}
 			.list li{padding: 10px; background: #f0f0f0; border-bottom: #bbb9b9 1px solid;}
@@ -212,6 +217,7 @@ if (!empty($_POST['Hospital_Name']) !='' && !empty($_POST['Patient_Name']) !='' 
 			<label>Hospital ID</label>
 			<input type="text" class="form-control" name="Hospital_ID">
 		</div>
+
       <div class="form-group col-sm-6">
 	    <label>Type of Hospital</label>
 			<div class="form-check">
@@ -257,9 +263,13 @@ if (!empty($_POST['Hospital_Name']) !='' && !empty($_POST['Patient_Name']) !='' 
 <div id="menu2" class="tab-pane fade">
     <div class="clearfix"><br></div>
     <div id="pageheading" style="text-align: left;">DETAILS OF PATIENT ADMITTED	</div>
-     <div class="form-group col-sm-12">
-	    <label>Name of the Patient</label>
-	    <input type="text" class="form-control" name="Patient_Name" required>
+     <div class="form-group col-sm-6">
+	    <label>Patient First Name </label>
+	    <input type="text" class="form-control" name="Patient_Name" id="Patient_Name" required>
+    </div>
+	<div class="form-group col-sm-6">
+	    <label>Patient Last Name </label>
+	    <input type="text" class="form-control" id="Patient_Last_Name" name="Patient_Last_Name" required>
     </div>
     <div class="form-group col-sm-6">
 	    <label>IP Registration No.</label>
@@ -721,8 +731,12 @@ if (!empty($_POST['Hospital_Name']) !='' && !empty($_POST['Patient_Name']) !='' 
 <script type="text/javascript" src="js/bootstrap-timepicker.min.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script type="text/javascript" src="js/jquery.validate.min.js"></script>
-<script src="js/bootstrap3-typeahead.min.js"></script> 
+<script src="js/bootstrap3-typeahead.min.js"></script>
+
 <script>
+    $('#DateofTime').timepicker();
+    $('#TimeofDischarge').timepicker();
+
 $(document).ready(function () {
   $("#area_code").keypress(function (e) {
      if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
@@ -902,6 +916,7 @@ $(document).ready(function () {
 				rules: {
 					Hospital_Name: "required",
 					Patient_Name: "required",
+					Patient_Last_Name: "required",
 					IP_Registration:"required",
 					DateofBirth:"required",
 					DateofAdmission:"required",
@@ -912,7 +927,8 @@ $(document).ready(function () {
 				},
 				messages: {
 					Hospital_Name: "Please Enter Hospital Name.",
-					Patient_Name: "Please Enter Patient Name",
+					Patient_Name: "Please Enter Patient First Name.",
+					Patient_Last_Name: "Please Enter Patient Last Name.",
 					IP_Registration: "Please Enter User Patient Policy ID.",
 					DateofBirth: "Please Enter Date Of Birth.",
 					DateofAdmission: "Please Enter Date Of Admission.",
@@ -948,8 +964,7 @@ $(document).ready(function () {
  	$('.nav-tabs a').click(function(){
     	$(this).tab('show');
     });
-    $('#DateofTime').timepicker();
-    $('#TimeofDischarge').timepicker();
+    
     $(function() {
         $( "#DateofBirth" ).datepicker({
             dateFormat : 'mm/dd/yy',

@@ -37,11 +37,19 @@ include('include/functions.php');
 		 </div>
 		 <div class="col-sm-10 paddingrl0" id="content_wrapper">
 		 	<?php include_once('top_header.php');?>
-		 	<section>
-                <?php $title = "CLAIM FORM - PART B"; ?>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 paddingrl0">
-    	            <div id="plantitle"><span style="padding-left:0px;"><?php echo $title;?>  <?php if(isset($PatientList) &&  $PatientList !=''){echo '('.$PatientList.')';}?>  </span></div>
-                </div>
+		<section>
+               
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 paddingrl0">
+    	        <div id="plantitle" style="font-family:RalewayRegular;font-size: 1.8em;">
+					<span style="margin-left: 155px; float:left;">
+						Claim ID -  <?php echo $_GET['claimID'];  ?>  
+					</span>
+					<span style="padding-left:0px;">
+					    Patient Name - <?php echo $result['Patient_Name'].' '.$result['Patient_Last_Name'];?>
+					</span>
+				</div>
+            </div>
+
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="mainplanlistdiv">
 		  <ul id="navigation_tab" class="nav nav-tabs">
@@ -157,9 +165,19 @@ include('include/functions.php');
          <input type="hidden" name="claimID" id="claimID" value="<?php echo $_GET['claimID']?>">
     </div>
 
-     <div class="form-group col-sm-12">
+    <!-- <div class="form-group col-sm-12">
 	    <label>Name of the Patient</label>
 	    <input type="text" class="form-control" name="Patient_Name" value="<?php echo $result['Patient_Name'];?>">
+    </div> -->
+
+	 <div class="form-group col-sm-6">
+	    <label>Patient First Name </label>
+	    <input type="text" class="form-control" name="Patient_Name" value="<?php echo $result['Patient_Name'];?>">
+    </div>
+
+	<div class="form-group col-sm-6">
+	    <label>Patient Last Name </label>
+	    <input type="text" class="form-control" name="Patient_Last_Name" value="<?php echo $result['Patient_Last_Name'];?>">
     </div>
 
     <div class="form-group col-sm-6">
@@ -192,7 +210,7 @@ include('include/functions.php');
     <div class="form-group col-sm-2">
 		<label>Age :</label>
 		<?php
-		if($result['Date_of_Birth'] !=''){
+		if($result['Date_of_Birth'] !='' && $result['Date_of_Birth'] !='0000-00-00'){
 			$userDob = $result['Date_of_Birth'];
 			$dob = new DateTime($userDob);
 			$now = new DateTime();
@@ -205,12 +223,15 @@ include('include/functions.php');
     </div>
 		<div class="col-sm-2">
 			<label>Date of Birth</label>
-			<input type="text" class="form-control" name="DateofBirth" id="DateofBirth" value="<?php if($result['Date_of_Birth'] != '0000-00-00')echo date('m-d-Y',strtotime($result['Date_of_Birth']));
-			?>">
+			<input type="text" class="form-control" name="DateofBirth" id="DateofBirth" value="<?php if($result['Date_of_Birth'] != '0000-00-00' && $result['Date_of_Birth'] != ''){echo date('m-d-Y',strtotime($result['Date_of_Birth']));
+			}else{}?>">
 		</div>
         <div class="form-group col-sm-2">
 	        <label>Date of Admission</label>
-			<input type="text" class="form-control" name="DateofAdmission" id="DateofAdmission" value="<?php if($result['Date_of_Admission']){echo date('m-d-Y',strtotime($result['Date_of_Admission']));}?>">
+			
+			<!-- <input type="text" class="form-control" name="DateofAdmission" id="DateofAdmission" value="<?php if($result['Date_of_Admission']){echo date('m-d-Y',strtotime($result['Date_of_Admission']));}?>"> -->
+			<input type="text" class="form-control" name="DateofAdmission" id="DateofAdmission" value="<?php if($result['Date_of_Admission'] != '0000-00-00' && $result['Date_of_Admission'] != ''){echo date('m-d-Y',strtotime($result['Date_of_Admission']));
+			}else{}?>">
        </div>
 
 		<div class="form-group col-sm-2">
@@ -220,7 +241,9 @@ include('include/functions.php');
 
 		<div class="form-group col-sm-2">
 			<label>Date of Discharge</label>
-			<input type="text" class="form-control" name="DateofDischarge" id="DateofDischarge" value="<?php echo date('m-d-Y',strtotime($result['Date_of_Discharge']));?>">
+			<!-- <input type="text" class="form-control" name="DateofDischarge" id="DateofDischarge" value="<?php echo date('m-d-Y',strtotime($result['Date_of_Discharge']));?>"> -->
+			<input type="text" class="form-control" name="DateofDischarge" id="DateofDischarge" value="<?php if($result['Date_of_Discharge'] != '0000-00-00' && $result['Date_of_Discharge'] != ''){echo date('m-d-Y',strtotime($result['Date_of_Discharge']));
+			}else{}?>">
 		</div>
 
 		<div class="form-group col-sm-2">
@@ -262,7 +285,9 @@ include('include/functions.php');
 
 		<div class="col-sm-2">
 			<label>Date of Delivery</label>
-			<input type="text" class="form-control" name="DateofDelivery" id="DateofDelivery" value="<?php if($result['Date_of_Delivery']){echo date('m-d-Y',strtotime($result['Date_of_Delivery']));}?>">
+			<!-- <input type="text" class="form-control" name="DateofDelivery" id="DateofDelivery" value="<?php if($result['Date_of_Delivery']){echo date('m-d-Y',strtotime($result['Date_of_Delivery']));}?>"> -->
+			<input type="text" class="form-control" name="DateofDelivery" id="DateofDelivery" value="<?php if($result['Date_of_Delivery'] != '0000-00-00'){echo date('m-d-Y',strtotime($result['Date_of_Delivery']));
+			}else{}?>">
 		</div>
 
 		<div class="col-sm-2">
@@ -734,7 +759,10 @@ include('include/functions.php');
 			<div class="col-sm-6">
 					<label for="inputPassword3" class="col-sm-2 col-form-label">Date:</label>
 					<div class="col-sm-10">
-					<input value="<?php echo date('m-d-Y',strtotime($result['Declaration_Date']));?>" type="text" class="form-control" name="date">
+					
+					<!-- <input value="<?php echo date('m-d-Y',strtotime($result['Declaration_Date']));?>" type="text" class="form-control" name="date"> -->
+					<input type="text" class="form-control" name="date" id="date" value="<?php if($result['Declaration_Date'] != '0000-00-00' && $result['Declaration_Date'] != ''){echo date('m-d-Y',strtotime($result['Declaration_Date']));
+			}else{}?>">
 					</div>
 			</div>
 
